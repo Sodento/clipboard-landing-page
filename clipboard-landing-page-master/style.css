@@ -7,6 +7,7 @@
 
     --dark-grayish-blue: hsl(210, 10%, 33%);
     --grayish-blue: hsl(201, 11%, 66%);
+    --very-light-blue: hsl(201, 10%, 90%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -184,9 +185,55 @@ body {
 /* FOOTER */
 
 footer {
-    background-color: var(--grayish-blue);
+    background-color: var(--very-light-blue);
     display: flex;
+    justify-content: center;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 2rem 0;
+}
 
+.logo {
+    width: 5rem;
+    height: 5rem;
+}
 
+.help {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 5rem;
+    transform: translateX(-10%);
+}
+
+.help button {
+    background-color: transparent;
+    border: none;
+    color: var(--dark-grayish-blue);
+    text-align: start;
+}
+
+.help button:hover {
+    color: var(--strong-cyan);
+    cursor: pointer;
+}
+
+.social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.social img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(31%) sepia(5%) saturate(1296%) hue-rotate(171deg) brightness(93%) contrast(83%);
+}
+
+.social img:hover {
+    filter: invert(56%) sepia(88%) saturate(366%) hue-rotate(121deg) brightness(92%) contrast(88%);
+    cursor: pointer;
+}
